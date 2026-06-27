@@ -1,6 +1,4 @@
 # TripSync
-A full-stack group trip companion
-# TripSync
 A full-stack group trip companion — split expenses, chat in real time, manage checklists and get AI-powered suggestions.
 
 ## Tech Stack
@@ -10,3 +8,6 @@ A full-stack group trip companion — split expenses, chat in real time, manage 
 
 ## Status
 🚧 Phase 1 in progress
+## Pages
+- `login.html` — Login & Sign Up
+- `index.html` — Dashboard with plan cards (grid layout, FABs, bottom nav)

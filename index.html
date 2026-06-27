@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tripsync - Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <header class="dashboard-header">
+        <h1 class="logo">TripSync</h1>
+        <div class="avatar" id="user-avatar">T</div>
+    </header>
+
+    <main class="dashboard-main">
+        <section class="greeting-section">
+            <p class="greeting"> Hey, Tanya 👋 </p>
+            <p class="subtext">What's the plan?</p>
+        </section>
+        <section class="plans-section">
+            <h2>Your Plans</h2>
+            <div class="plans-grid">
+                <div class="card">
+                    <div class="card-banner"></div>
+                    <div class="card-info">
+                        <h3 class="event-name">Goa Trip</h3>
+                        <p class="event-date">27 June 2026</p>
+                        <p class="group-members">4 Members</p>
+                        <span class="event-badge">Trip</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-banner" style="background-color: #e8a838;"></div>
+                    <div class="card-info">
+                        <h3 class="event-name">Saturday Dinner</h3>
+                        <p class="event-date">17 June 2026</p>
+                        <p class="group-members">3 Members</p>
+                        <span class="event-badge">Dinner</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <nav>
+        <ul class="nav-list">
+            <li class="active home"><a href="index.html">🏠 <span>Home</span> </a></li>
+            <li class="plans"><a href="#">📋 <span>My Plans</span> </a></li>
+            <li class="profile"><a href="#">👤 <span>Profile</span> </a></li>
+        </ul>
+    </nav>
+
+    <div class="fab-container">
+        <button class="fab" id="btn-ai">✨</button>
+        <button class="fab" id="btn-new-plan">+ </button>
+    </div>
+    
+</body>
+</html>
