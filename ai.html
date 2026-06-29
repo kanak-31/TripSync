@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TripSync - AI</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="ai-header">
+        <h1>AI Suggestions ✨</h1>
+    </header>
+
+    <main>
+
+        <form class="ai-form">
+
+            <label for="plan">What's your Plan</label>
+            <select name="plan" id="plan">
+                <option value="" disabled selected>Select Plan Type</option>
+                <option value="day-out">Day Out</option>
+                <option value="trip">Trip</option>
+                <option value="dinner">dinner</option>
+                <option value="movie-night">Movie Night</option>
+                <option value="other">Other</option>
+            </select>
+            <input type="text" name="other-plan" id="other-plan" placeholder="Describe Your Plan...">
+            
+            <label for="location">Your location</label>
+            <input type="text" placeholder="Enter Your Location" id="location" name="location">
+
+            <label for="members">Members</label>
+            <input type="number" placeholder="Enter member's count" id="members" name="members">
+
+            <label for="budget">Your Budget</label>
+            <input type="number" name="budget" id="budget" placeholder="Enter your budget">
+            <div class="budget-toggle">
+                <input type="radio" id="per-person" name="budget-type" value="per-person">
+                <label for="per-person">Per Person</label>
+                <input type="radio" id="total" name="budget-type" value="total">
+                <label for="total">Total</label>
+            </div>
+
+            <div class="vibe-chips">
+                <label for="adventure">Adventure</label>
+                <input type="checkbox" id="adventure" name="adventure">
+                <label for="relaxed">Relaxed</label>
+                <input type="checkbox" id="relaxed" name="relaxed">
+                <label for="cultural">Cultural</label>
+                <input type="checkbox" id="cultural" name="cultural">
+                <label for="foodie">Foodie</label>
+                <input type="checkbox" id="foodie" name="foodie">
+                <label for="party">Party</label>
+                <input type="checkbox" id="party" name="party">
+                <label for="fun">Fun</label>
+                <input type="checkbox" id="fun" name="fun">
+            </div>
+
+            <button type="submit">Get Suggestion</button>
+
+        </form>
+
+        <div class="ai-results">
+            <h3>Suggested for you ✨</h3>
+
+            <div class="place-card">
+                <h4>Place Name</h4>
+                <span class="place-type">Place Type</span>
+                <p>Estimated Cost</p>
+                <p>short description</p>
+            </div>
+
+            <div class="place-card">
+                <h4>Place Name</h4>
+                <span class="place-type">Place Type</span>
+                <p>Estimated Cost</p>
+                <p>short description</p>
+            </div>
+        </div>
+        
+    </main>
+
+    <nav>
+        <ul class="nav-list">
+            <li class="active home"><a href="index.html">🏠 <span>Home</span> </a></li>
+            <li class="profile"><a href="#">👤 <span>Profile</span> </a></li>
+            <li class="ai"><a href="#"> ✨ <span>Ai</span></a></li>
+        </ul>
+    </nav>
+
+</body>
+</html>
