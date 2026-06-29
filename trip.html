@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TripSync - Plan</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="trip-header">
+        <button>&larr;</button>
+        <h1> Plan Name </h1>
+        <button> &#8942; </button>
+    </header>
+
+    <div class="tab-bar">
+        <button class="active">Home</button>
+        <button>Chat</button>
+        <button>Expense</button>
+        <button>Checklist</button>
+    </div>
+
+    <main class="trip-main">
+
+        <section id="home" >
+
+            <div class="trip-info-card">
+                <h2> Plan Name </h2>
+                <p> 📍Destination </p>
+                <p> 📅 Date </p>
+            </div>
+
+            <div class="member-section">
+                <h3> Members </h3>
+                <ul>
+                    <li><span>K</span> Kanak </li>
+                    <li><span>R</span> Riya </li>
+                    <li><span>A</span> Aradhana </li>
+                    <li><span>A</span> Anshi </li>
+                </ul>
+            </div>
+
+            <div class="invite-section">
+                <p>Invite Code: <span>Trip123</span></p>
+                <button>📋 Copy Code</button>
+            </div>
+
+        </section>
+
+        <section id="chat" >
+
+            <div class="chat-message">
+                <div class="message">
+                    <h3>Kanak</h3>
+                    <p>Hii guys</p>
+                </div>
+                <div class="message">
+                    <h3>Riya</h3>
+                    <p>Hii Kanka</p>
+                </div>
+                <div class="message">
+                    <h3>Aradhana</h3>
+                    <p>where's Anshi</p>
+                </div>
+            </div>
+
+            <div class="chat-input">
+                <input type="text" placeholder="Type a message...">
+                <button>Send</button>
+            </div>
+
+        </section>
+
+        <section id="expense" >
+
+            <div class="add-expense">
+                <h3>Add Expense</h3>
+                <input type="text" placeholder="Who paid?">
+                <input type="number" placeholder="Amount">
+                <input type="text" placeholder="What for?">
+                <button>+ Add Expense</button>
+            </div>
+
+            <div class="expense-list">
+                <h3>Expense</h3>
+                <div>
+                    <p>Name</p>
+                    <p>Amount</p>
+                    <p>For What</p>
+                </div>
+                <div>
+                    <p>Name</p>
+                    <p>Amount</p>
+                    <p>For What</p>
+                </div>
+            </div>
+
+            <div class="settlement-summary">
+                <h3>Settlement</h3>
+                <p>Riya owes Kanak ₹200</p>
+                <p>Aradhana owes Riya ₹350</p>
+            </div>
+
+        </section>
+
+        <section id="checklist" >
+
+            <div class="add-item">
+                <input type="text" placeholder="Add Item">
+                <button>+ Add</button>
+            </div>
+
+            <div class="checklist-items">
+                <h3>Checklist</h3>
+                <div>
+                    <input type="checkbox">
+                    <label for="item-name">Book hotels</label>
+                    <button>Delete</button>
+                </div>
+                <div>
+                    <input type="checkbox">
+                    <label for="item-name">Pack Sunscreen</label>
+                    <button>Delete</button>
+                </div>
+                <div>
+                    <input type="checkbox">
+                    <label for="item-name">Water Bottels</label>
+                    <button>Delete</button>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <nav>
+        <ul class="nav-list">
+            <li class="active home"><a href="index.html">🏠 <span>Home</span> </a></li>
+            <li class="profile"><a href="#">👤 <span>Profile</span> </a></li>
+            <li class="ai"><a href="#"> ✨ <span>Ai</span></a></li>
+        </ul>
+    </nav>
+
+</body>
+</html>
