@@ -13,8 +13,8 @@
     <main class="login-main">
         <div class="mainbox">
             <div class="toggle-button">
-                <button class="active">Login</button>
-                <button>Sign Up</button>
+                <button class="active" id="btn-login-toggle">Login</button>
+                <button id="btn-signup-toggle">Sign Up</button>
             </div>
 
             <form id="login-form">
@@ -24,10 +24,11 @@
                 <label for="password">Password</label>
                 <input type="password" placeholder="Enter Your Password" name="password" id="password" required>
                 <button id="btn-login">Login</button>
+                <div class="forgotPassword">
+                    <a href="#">Forgot Password?</a>
+                </div>
             </form>
-            <div class="forgotPassword">
-                <a href="#">Forgot Password?</a>
-            </div>
+            
             <form id="signup-form" style="display: none;">
                 <h2>Create Account</h2>
                 <label for="fullname">Full Name</label>
@@ -43,4 +44,5 @@
         </div>
     </main>
 </body>
+<script src="js/login.js"></script>
 </html>

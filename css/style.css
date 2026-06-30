@@ -5,6 +5,11 @@
     --card-shadow: 0 -2px 20px rgba(0, 0, 0, 0.2);
 }
 
+html {
+    background-color: #f0f4f8;
+    overscroll-behavior-y: contain;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -415,6 +420,10 @@ form h2{
 
 /*------------------expense-section---------------------*/
 
+#expense{
+    padding-bottom: 2rem;
+}
+
 .add-expense{
     background-color: white;
     border-radius: 12px;
@@ -481,6 +490,7 @@ form h2{
 
 
 /*-------------checklist-section--------------------*/
+
 .add-item{
     display: flex;
     gap: 0.5rem;
@@ -528,13 +538,107 @@ form h2{
     width: auto;
 }
 
-
-
-
 .checklist-items button{
     background-color: transparent;
     border: none;
     cursor: pointer;
     margin-left: auto;
     font-size: 1rem;
+}
+
+
+/* ==== AI PAGE ==== */
+
+.ai-main{
+    padding: 1.5rem;
+    padding-bottom: 5rem;
+}
+
+.ai-form{
+    background-color: white;
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: var(--card-shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.ai-form select{
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    outline: none;
+    appearance: none;
+}
+
+.budget-toggle{
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.vibe-chips input[type="checkbox"] {
+    display: none;
+}
+
+.vibe-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.vibe-chips label{
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+
+.vibe-chips input[type="checkbox"]:checked + label{
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.place-card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: var(--card-shadow);
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.place-type {
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 20px;
+    padding: 0.2rem 0.6rem; 
+    font-size: 0.7rem;
+    align-self: flex-start;
+}
+
+.budget-toggle input[type="radio"] {
+    width: auto;
+    accent-color: var(--primary-color); /* CSS property specifically made for native form elements like checkboxes and radio buttons*/
+    cursor: pointer;
+}
+
+.budget-toggle label {
+    cursor: pointer;
+    color: var(--text-color);
+    font-size: 0.9rem;
+}
+
+.ai-results h3{
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    text-align: center;
 }

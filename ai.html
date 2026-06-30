@@ -6,13 +6,13 @@
     <title>TripSync - AI</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="ai-body">
 
     <header class="ai-header">
         <h1>AI Suggestions ✨</h1>
     </header>
 
-    <main>
+    <main class="ai-main">
 
         <form class="ai-form">
 
@@ -35,6 +35,7 @@
 
             <label for="budget">Your Budget</label>
             <input type="number" name="budget" id="budget" placeholder="Enter your budget">
+
             <div class="budget-toggle">
                 <input type="radio" id="per-person" name="budget-type" value="per-person">
                 <label for="per-person">Per Person</label>
@@ -43,18 +44,18 @@
             </div>
 
             <div class="vibe-chips">
-                <label for="adventure">Adventure</label>
                 <input type="checkbox" id="adventure" name="adventure">
-                <label for="relaxed">Relaxed</label>
+                <label for="adventure">Adventure</label>
                 <input type="checkbox" id="relaxed" name="relaxed">
-                <label for="cultural">Cultural</label>
+                <label for="relaxed">Relaxed</label>
                 <input type="checkbox" id="cultural" name="cultural">
-                <label for="foodie">Foodie</label>
+                <label for="cultural">Cultural</label>
                 <input type="checkbox" id="foodie" name="foodie">
-                <label for="party">Party</label>
+                <label for="foodie">Foodie</label>
                 <input type="checkbox" id="party" name="party">
-                <label for="fun">Fun</label>
+                <label for="party">Party</label>
                 <input type="checkbox" id="fun" name="fun">
+                <label for="fun">Fun</label>
             </div>
 
             <button type="submit">Get Suggestion</button>
