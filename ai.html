@@ -8,7 +8,7 @@
 </head>
 <body class="ai-body">
     <div class="responsive-shell">
-        
+
         <header class="ai-header">
             <h1>AI Suggestions ✨</h1>
         </header>
@@ -22,11 +22,11 @@
                     <option value="" disabled selected>Select Plan Type</option>
                     <option value="day-out">Day Out</option>
                     <option value="trip">Trip</option>
-                    <option value="dinner">dinner</option>
+                    <option value="dinner">Dinner</option>
                     <option value="movie-night">Movie Night</option>
-                    <option value="other">Other</option>
+                    <option value="other" id="other-option">Other</option>
                 </select>
-                <input type="text" name="other-plan" id="other-plan" placeholder="Describe Your Plan...">
+                <input type="text" name="other-plan" id="other-plan" placeholder="Describe Your Plan..." hidden>
                 
                 <label for="location">Your location</label>
                 <input type="text" placeholder="Enter Your Location" id="location" name="location">
@@ -94,4 +94,5 @@
     </div>
 
 </body>
+<script src="js/ai.js"></script>
 </html>
