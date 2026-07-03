@@ -7,43 +7,45 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header class="login-header">
-        <h1>TripSync</h1>
-        <div class="tripsync-logo">TS</div>
-    </header>
-    <main class="login-main">
-        <div class="mainbox">
-            <div class="toggle-button">
-                <button class="active" id="btn-login-toggle">Login</button>
-                <button id="btn-signup-toggle">Sign Up</button>
-            </div>
-
-            <form id="login-form">
-                <h2>Welcome Back</h2>
-                <label for="email">Email</label>
-                <input type="email" placeholder="Enter Your email" name="email" id="email" required>
-                <label for="password">Password</label>
-                <input type="password" placeholder="Enter Your Password" name="password" id="password" required>
-                <button id="btn-login">Login</button>
-                <div class="forgotPassword">
-                    <a href="#">Forgot Password?</a>
+    <div class="responsive-shell">
+        <header class="login-header">
+            <h1>TripSync</h1>
+            <div class="tripsync-logo">TS</div>
+        </header>
+        <main class="login-main">
+            <div class="main-box">
+                <div class="toggle-button">
+                    <button class="active" id="btn-login-toggle">Login</button>
+                    <button id="btn-signup-toggle">Sign Up</button>
                 </div>
-            </form>
-            
-            <form id="signup-form" style="display: none;">
-                <h2>Create Account</h2>
-                <label for="fullname">Full Name</label>
-                <input type="text"  placeholder="Enter Your name" name="fullname" id="fullname" required>
-                <label for="signupemail">Email</label>
-                <input type="email"  placeholder="Enter Your email" name="signupemail" id="signupemail" required>
-                <label for="signuppassword">Password</label>
-                <input type="password"  placeholder="Enter Your password" name="signuppassword" id="signuppassword" required>
-                <label for="confirm_password">Confirm Password</label>
-                <input type="password" placeholder="Confirm Password" name="confirm_password" id="confirm_password" required>
-                <button id="btn-signup">Sign Up</button>
-            </form>
-        </div>
-    </main>
+
+                <form id="login-form">
+                    <h2>Welcome Back</h2>
+                    <label for="email">Email</label>
+                    <input type="email" placeholder="Enter Your email" name="email" id="email" required>
+                    <label for="password">Password</label>
+                    <input type="password" placeholder="Enter Your Password" name="password" id="password" required>
+                    <button id="btn-login">Login</button>
+                    <div class="forgotPassword">
+                        <a href="#">Forgot Password?</a>
+                    </div>
+                </form>
+                
+                <form id="signup-form" style="display: none;">
+                    <h2>Create Account</h2>
+                    <label for="fullname">Full Name</label>
+                    <input type="text"  placeholder="Enter Your name" name="fullname" id="fullname" required>
+                    <label for="signupemail">Email</label>
+                    <input type="email"  placeholder="Enter Your email" name="signupemail" id="signupemail" required>
+                    <label for="signuppassword">Password</label>
+                    <input type="password"  placeholder="Enter Your password" name="signuppassword" id="signuppassword" required>
+                    <label for="confirm_password">Confirm Password</label>
+                    <input type="password" placeholder="Confirm Password" name="confirm_password" id="confirm_password" required>
+                    <button id="btn-signup">Sign Up</button>
+                </form>
+            </div>
+        </main>
+    </div>
 </body>
 <script src="js/login.js"></script>
 </html>

@@ -8,6 +8,7 @@
 html {
     background-color: #f0f4f8;
     overscroll-behavior-y: contain;
+    overflow-y: hidden;
 }
 
 * {
@@ -54,20 +55,21 @@ header h1{
 }
 
 .login-main{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: calc(100vh - 70px);
+    flex: 1;
+    overflow-y: auto;
+    /*justify-content: safe center;
+    align-items: safe center;*/
+    padding: 2rem 1 rem;
 }
 
-.mainbox{
+.main-box{
+    margin: 2rem auto;
     background-color: white;
     border-radius: 12px;
     padding: 2rem;
     width: 90%;
     max-width: 400px;
     box-shadow: var(--card-shadow);
-    margin: 2rem 0 2rem 0;
 }
 
 .mainbox input{
@@ -148,7 +150,7 @@ form h2{
 
 /* =========================== DASHBOARD PAGE ========================== */
 
-.dashboard-shell{
+.responsive-shell{
     position: relative;
     border-radius: 12px;
     height: 100vh;
@@ -349,6 +351,9 @@ form h2{
 
 .trip-main{
     padding: 1.5rem;
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .trip-info-card{
@@ -447,6 +452,7 @@ form h2{
 
 .chat-input input{
     flex: 1;
+    min-width: 0;
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 0.6rem;
@@ -590,11 +596,17 @@ form h2{
 }
 
 
-/* ==== AI PAGE ==== */
+/* ============================= AI PAGE ================================= */
 
 .ai-main{
     padding: 1.5rem;
     padding-bottom: 5rem;
+    overflow-y: auto;
+    flex: 1;
+}
+
+.ai-header{
+    text-align: center;
 }
 
 .ai-form{
