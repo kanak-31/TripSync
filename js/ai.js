@@ -1,9 +1,11 @@
 const plan = document.querySelector('#plan');
+const show = document.querySelector("#other-plan");
 
 plan.addEventListener('change', function(){
    if(plan.value === "other"){
-    document.querySelector("#other-plan").style.display = "block";
+    show.classList.remove("hidden") ;
    }else{
-    document.querySelector("#other-plan").style.display = "";
+    show.classList.add("hidden") ;
    }
 })
+
