@@ -7,8 +7,8 @@
 
 html {
     background-color: #f0f4f8;
-    overscroll-behavior-y: contain;
     overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 * {
@@ -242,10 +242,14 @@ form h2{
     box-shadow: var(--card-shadow);
     overflow: hidden;
     cursor: pointer;
+    width: 270px;
+    min-height: 250px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .card-banner {
-    height: 100px;
+    height: 130px;
     background-color: #4a90d9;
     display: flex;
     justify-content: center;
@@ -258,6 +262,7 @@ form h2{
     display: flex;
     flex-direction: column;
     gap: 0.3rem;
+    margin: auto;
 }
 
 .event-name{
@@ -286,7 +291,7 @@ form h2{
 
 .plans-grid{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     gap: 1rem;
     margin-top: 1rem;
 }
@@ -704,28 +709,24 @@ form h2{
 
 /* ============================== used media query for index.html =============================*/
 
-@media (max-width: 340px){
+@media (min-width: 341px){
     .plans-grid{
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .card{
-        width: 270px;
-        min-height: 250px;
+        width: 200px;
+        min-height: 220px;
         margin-left: auto;
-        margin-right: auto;
+        margin-right: auto
     }
 
     .card-banner {
-        height: 130px;
-        background-color: #4a90d9;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 2.5rem;
+        height: 120px;
     }
 
     .card-info{
-        margin: auto;
+        margin: 0;
     }
+    
 }
