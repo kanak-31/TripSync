@@ -72,6 +72,20 @@
         <div class="fab-container">
             <button class="fab" id="btn-new-plan">+ </button>
         </div>
+
+        <div class="overlay hidden">
+            <form class="new-card">
+                <label for="event-name">Enter event name</label>
+                <input type="text" name="event-name" id="event-name" placeholder="Enter event name" required>
+                <label for="date">Enter date</label>
+                <input type="date" name="date" id="date" placeholder="DD/MM/YYYY" required>
+                <label for="member">Enter Member's count</label>
+                <input type="number" name="member" id="member" placeholder="member" required>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
     </div>
 </body>
+<script src="js/index.js"></script>
 </html>
