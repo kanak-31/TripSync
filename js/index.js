@@ -45,7 +45,7 @@ newCard.addEventListener('submit', function(e){
 
     const numberOfMember = document.createElement('p');
     numberOfMember.classList.add('group-members');
-    numberOfMember.textContent = `${memberCount} members`;
+    numberOfMember.textContent = `${memberCount} Members`;
 
     infoDiv.appendChild(numberOfMember);
 
@@ -59,5 +59,18 @@ newCard.addEventListener('submit', function(e){
 
     overlay.classList.add('hidden');
 
-    newCard.request();
+    let savedCards = JSON.parse(localStorage.getItem('cards')) || [ ];
+
+    const cardData = {
+         eventName: eventName, 
+         eventDate: eventDate, 
+         memberCount: memberCount, 
+         badge: badge 
+    }
+
+    savedCards.push(cardData);
+
+    localStorage.setItem('cards',JSON.stringify(savedCards));
+
+    newCard.reset();
 })
