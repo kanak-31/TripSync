@@ -7,17 +7,7 @@ const date = document.querySelector('#date');
 const member = document.querySelector('#member');
 const eventBadge = document.querySelector('#category')
 
-fabButton.addEventListener('click', function(){
-    overlay.classList.remove('hidden');
-})
-
-newCard.addEventListener('submit', function(e){
-    e.preventDefault();
-    const eventName = newEvent.value;
-    const eventDate = date.value;
-    const memberCount = member.value;
-    const badge = eventBadge.value;
-
+const createCardElement = function(cardData){
     const mainDiv = document.createElement('div');
     mainDiv.classList.add('card');
 
@@ -33,33 +23,41 @@ newCard.addEventListener('submit', function(e){
 
     const h3 = document.createElement('h3');
     h3.classList.add('event-name');
-    h3.textContent = eventName;
+    h3.textContent = cardData.eventName;
 
     infoDiv.appendChild(h3);
 
     const dateOfEvent = document.createElement('p');
     dateOfEvent.classList.add('event-date');
-    dateOfEvent.textContent = eventDate;
+    dateOfEvent.textContent = cardData.eventDate;
 
     infoDiv.appendChild(dateOfEvent);
 
     const numberOfMember = document.createElement('p');
     numberOfMember.classList.add('group-members');
-    numberOfMember.textContent = `${memberCount} Members`;
+    numberOfMember.textContent = `${cardData.memberCount} Members`;
 
     infoDiv.appendChild(numberOfMember);
 
     const badgeSpan = document.createElement('span');
     badgeSpan.classList.add('event-badge');
-    badgeSpan.textContent = badge;
+    badgeSpan.textContent = cardData.badge;
 
     infoDiv.appendChild(badgeSpan);
 
-    plansGrid.appendChild(mainDiv);
+    return mainDiv;
+}
 
-    overlay.classList.add('hidden');
+fabButton.addEventListener('click', function(){
+    overlay.classList.remove('hidden');
+})
 
-    let savedCards = JSON.parse(localStorage.getItem('cards')) || [ ];
+newCard.addEventListener('submit', function(e){
+    e.preventDefault();
+    const eventName = newEvent.value;
+    const eventDate = date.value;
+    const memberCount = member.value;
+    const badge = eventBadge.value;
 
     const cardData = {
          eventName: eventName, 
@@ -68,9 +66,24 @@ newCard.addEventListener('submit', function(e){
          badge: badge 
     }
 
+    const newCardElement = createCardElement(cardData);
+
+    let savedCards = JSON.parse(localStorage.getItem('cards')) || [ ];
+
     savedCards.push(cardData);
+
+    plansGrid.appendChild(newCardElement);
+
+    overlay.classList.add('hidden');
 
     localStorage.setItem('cards',JSON.stringify(savedCards));
 
     newCard.reset();
 })
+
+let allSaveCards = JSON.parse(localStorage.getItem('cards')) || [ ];
+
+for(const item of allSaveCards){
+    const newCardElement = createCardElement(item);
+    plansGrid.appendChild(newCardElement);
+}
